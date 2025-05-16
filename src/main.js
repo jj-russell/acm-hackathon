@@ -104,7 +104,7 @@ function createChart() {
         datasets: [{
         label: 'Errors',
         data: [3000, 4000, 3200, 5000, 4800, 6000],
-        borderColor: 'rgb(34, 197, 94)', // Tailwind green-500
+        borderColor: 'rgb(34, 197, 94)',
         backgroundColor: 'rgba(34, 197, 94, 0.2)',
         tension: 0.4,
         fill: true,

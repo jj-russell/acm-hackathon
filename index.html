@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACM</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body class="bg-main text-main-text flex text-center">
+
+  <section class="bg-section shadow order-1 w-32 hidden md:block">
+    <p class="mt-12">Date Range</p>
+  </section>
+
+  <section class="p-6 space-y-6 order-2 w-full">
+    <header class="bg-section shadow p-4 flex items-center justify-center rounded-md">
+    <h1 class="text-2xl font-bold mx-auto">ACM</h1>
+    <p>LIGHT</p>
+    <label id="toggleDark" class="relative inline-block w-[60px] h-[34px] mx-2">
+      <input type="checkbox" class="sr-only peer">
+      <div class="bg-muted absolute top-0 left-0 right-0 bottom-0 transition duration-400 rounded-full cursor-pointer"></div>
+      <div class="bg-white absolute left-1 bottom-1  w-[26px] h-[26px] rounded-full transition duration-400 peer-checked:translate-x-[26px] cursor-pointer"></div>
+    </label>
+    <p>DARK</p>
+
+    </header>
+    <h2 class="text-2xl font-semibold ">Dashboard Charts</h2>
+
+    <section id="chartGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- styled in the css  -->
+
+      <div class="max-h-[400px] overflow-y-auto col-span-1 md:col-span-2">
+        <table class="w-full">
+          <!-- <caption>Logs</caption> -->
+            <thead class="bg-main sticky top-0">
+              <tr>
+                <th>IP</th>
+                <th>Timestamp</th>
+                <th>Request</th>
+                <th>Response Code</th>
+                <th>Bytes sent</th>
+                <th>Referrer</th>
+                <th>User Agent</th>
+              </tr>
+            </thead>
+          <tr><tbody>
+            
+              <td>192.168.1.10</td>
+              <td>[16/May/2025:14:21:10 +0000]</td>
+              <td>"GET /index.html HTTP/1.1"</td>
+              <td>200</td>
+              <td>1024</td>
+              <td>"https://example.com/"</td>
+              <td>"Mozilla/5.0..."</td>
+            </tr>
+            <tr>
+              <td>192.168.1.10</td>
+              <td>[16/May/2025:14:21:10 +0000]</td>
+              <td>"GET /index.html HTTP/1.1"</td>
+              <td>200</td>
+              <td>1024</td>
+              <td>"https://example.com/"</td>
+              <td>"Mozilla/5.0..."</td>
+            </tr>
+            <tr>
+              <td>192.168.1.10</td>
+              <td>[16/May/2025:14:21:10 +0000]</td>
+              <td>"GET /index.html HTTP/1.1"</td>
+              <td>200</td>
+              <td>1024</td>
+              <td>"https://example.com/"</td>
+              <td>"Mozilla/5.0..."</td>
+            </tr>
+            <tr>
+              <td>192.168.1.10</td>
+              <td>[16/May/2025:14:21:10 +0000]</td>
+              <td>"GET /index.html HTTP/1.1"</td>
+              <td>200</td>
+              <td>1024</td>
+              <td>"https://example.com/"</td>
+              <td>"Mozilla/5.0..."</td>
+            </tr>
+            <tr>
+              <td>192.168.1.10</td>
+              <td>[16/May/2025:14:21:10 +0000]</td>
+              <td>"GET /index.html HTTP/1.1"</td>
+              <td>200</td>
+              <td>1024</td>
+              <td>"https://example.com/"</td>
+              <td>"Mozilla/5.0..."</td>
+            </tr>
+            <tr>
+              <td>192.168.1.10</td>
+              <td>[16/May/2025:14:21:10 +0000]</td>
+              <td>"GET /index.html HTTP/1.1"</td>
+              <td>200</td>
+              <td>1024</td>
+              <td>"https://example.com/"</td>
+              <td>"Mozilla/5.0..."</td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+
+       <div class="flex flex-col justify-center gap-4 text-xl">
+        <p>Total Requests: 5,097</p>
+        <p>Average Response Time: 13ms</p>
+        <p>Unique IPS: 3,124</p>
+      </div>
+
+      <div>
+        <canvas id="requestChart" class="w-full h-full"></canvas>
+      </div>
+
+      <div>
+        <canvas id="statusChart" class="w-full h-full"></canvas>
+      </div>
+
+      <div>
+        <canvas id="barChart" class="w-full h-full"></canvas>
+      </div>
+
+    </section>  
+  </section>
+
+</body>
+</html>

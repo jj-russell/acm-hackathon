@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-main: var(--color-gray-100);
+  --color-section: var(--color-white);
+  --color-card: var(--color-gray-200);
+  --color-main-text: var(--color-black);
+  --color-muted: var(--color-gray-300);
+  --color-accent: var(--color-blue-700);
+}
+
+@layer theme {
+  .dark {
+    --color-main: var(--color-gray-800);
+    --color-section: var(--color-gray-700);
+    --color-card: var(--color-gray-600);
+    --color-main-text: var(--color-gray-300);
+    --color-muted: var(--color-gray-500);
+    --color-accent: var(--color-blue-900);
+  }
+}
+
+*, *:before, *:after {
+    @apply box-border;
+}
+
+#chartGrid > div {
+  @apply bg-section p-4 rounded-lg shadow h-72;
+}
+
+table, th, td {
+  @apply border-solid border-1 border-main-text;
+}
+
+th, td {
+  @apply p-1;
+}
+
+/* table * {
+  @apply py-0;
+} */
